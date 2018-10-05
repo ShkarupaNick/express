@@ -1,0 +1,83 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li {{# ifEquals title 'Registration'}}class="active"{{/ifEquals}}><a href="/users/registration">Registration</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign in</b> <span
+                            class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Login via
+                                    <div class="social-buttons">
+                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                        <a href="#" class="btn btn-google btn-google btn-block"><i class="fa fa-google"></i> Google</a>
+                                    <p class="nav-or">OR</p>
+
+                                    <form method="POST" class="form" action="/users/login" id="login-nav" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="inputLogin">Email</label>
+                                            <input id="inputLogin" name="email" type="email"
+                                                   class="form-control" placeholder="Enter the E-mail"
+                                                   autofocus="true"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sr-only" for="inputPassword">Password</label>
+                                            <input path="password" name="password"
+                                                      class="form-control"
+                                                      id="inputPassword"
+                                                      placeholder="Enter the password"></input>
+
+                                            <div class="help-block text-right"><a href="#">Forget the password
+                                                ?</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> Sign in</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember-me"> keep me logged-in
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-sign-out"></i> Logout</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="bottom text-center">
+                                    New here? <a href="users/registration"><b>Sign up</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-collapse -->
+</nav>

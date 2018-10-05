@@ -1,0 +1,32 @@
+<div id="login-box">
+    <form class="left-reg" method="post" action="/users/registration" enctype="">
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"/>
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                </div>
+            </div>
+        </div>
+        <h1>Sign up</h1>
+
+        <input type="text" name="firstName" placeholder="First Name"/>
+        <input type="text" name="lastName" placeholder="Last Name"/>
+        <input type="text" name="email" placeholder="E-mail"/>
+        <input type="password" name="password" placeholder="Password"/>
+        <input type="password" name="password2" placeholder="Confirm password"/>
+        <input type="submit" name="signup_submit" value="Sign me up"/>
+    </form>
+    <div class="right-reg">
+        <span class="loginwith">Sign in with<br/>social network</span>
+
+        <button class="social-signin facebook"><i class="fa fa-facebook"></i> Log in with facebook</button>
+        <button class="social-signin twitter"><i class="fa fa-twitter"></i> Log in with Twitter</button>
+        <button class="social-signin google"><i class="fa fa-google"></i> Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+</div>
+
+<script src="/javascripts/registration.js"></script>
